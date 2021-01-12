@@ -2,14 +2,12 @@ import os
 import face_recognition
 from flask import Flask, jsonify, request, redirect
 import know_data
+from ..web.start import app
 
 # You can change this to any folder on your system
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 FACE_IMAGE_LIST = []
-
-app = Flask(__name__)
-
 
 @app.route('/check', methods=['GET', 'POST'])
 def upload_image():
@@ -58,8 +56,3 @@ def detect_faces_in_image(file_stream):
         "found": face_found,
     }
     return jsonify(result)
-
-
-if __name__ == "__main__":
-    know_data.load_face_dic()
-    app.run(host='0.0.0.0', port=6000, debug=True)
