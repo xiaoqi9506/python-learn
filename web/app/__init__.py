@@ -1,5 +1,5 @@
 from flask import Flask
-from web.config import config
+from config import config
 
 
 def create_app(config_name):
@@ -18,7 +18,7 @@ def create_app(config_name):
 def register_blueprints(app):
     # 导入蓝本对象
     # 方式一
-    from web.app.api import api
+    from app.api import api
 
     # 方式二：这样，就不用在app/api/__init__.py（创建蓝本时）里面的最下方单独引入各个视图模块了
     # from app.api.views import api

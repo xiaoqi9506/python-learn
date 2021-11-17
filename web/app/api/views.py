@@ -1,5 +1,5 @@
 from flask import jsonify, request
-from web.app.api import api
+from app.api import api
 from ai import identify
 
 
