@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-    或者  #coding=utf-8
 from flask import jsonify
 from . import api
 

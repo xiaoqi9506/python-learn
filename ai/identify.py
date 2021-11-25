@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-    或者  #coding=utf-8
 import paddlehub as hub
 import numpy as np
 from PIL import Image
