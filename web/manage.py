@@ -1,4 +1,3 @@
-# 启动程序
 from app import create_app
 
 """
