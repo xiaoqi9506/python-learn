@@ -1,5 +1,8 @@
 from flask import Flask
+import sys
 from config import config
+
+sys.path.append("..")
 
 
 def create_app(config_name):

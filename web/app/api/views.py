@@ -1,6 +1,10 @@
 from flask import jsonify, request
 from app.api import api
-import identify
+from ai import identify
+import sys
+
+
+sys.path.append("../../../ai")
 
 
 @api.route('/', methods=['GET'])
